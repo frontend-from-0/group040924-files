@@ -1,0 +1,41 @@
+/* CSS in external file */
+
+body {
+  color: #291492;
+}
+
+nav {
+  border-bottom: 4px solid #291492;
+}
+
+ul {
+  list-style-type: none;
+  padding: 20px 60px;
+  text-align: right;
+}
+
+li {
+  /* Next line is used to display multiple list item elements on the same line */
+  display: inline-block;
+  color: #169326;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 20px;
+}
+
+/* To use class selector in CSS, use . followed by the name of the class added in HTML */
+.text-left {
+  text-align: left;
+}
+
+.container {
+  width: 50%;
+  /* Used to center div with class container on the page */
+  margin: 40px auto;
+  padding: 10px;
+  /* Border setting added for .container class selector does not work because it is overwriten by inline styles added to the same div element. */
+  border: 2px solid #d8db0d;
+}
