@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Contact</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<form action="" method="GET">
+			<fieldset>
+				<label for="name">First last-name </label>
+				<input type="text" id="name" name="first-name" placeholder="John"/>
+
+				<label for="surname">Last name</label>
+				<input type="text" id="surname" name="last-name" placeholder="Doe"/>
+			</fieldset>
+
+			<input type="checkbox" value="terms-and-conditions" id="terms" />
+			<label for="terms">Accept terms and conditions</label>
+
+			<div>
+				<label for="language">What language are you using right now?</label>
+				<select name="select-promming-language" id="language">
+					<option value="html">HTML</option>
+					<option value="css">CSS</option>
+					<option value="js">JS</option>
+				</select>
+			</div>
+
+			<div>
+				<h2>What language do you speak?</h2>
+				<label for="language-english">English </label>
+				<input
+					type="radio"
+					name="langauge"
+					value="English"
+					id="language-english"
+				/>
+
+				<label for="language-spanish">Spanish</label>
+				<input
+					type="radio"
+					name="langauge"
+					value="Spanish"
+					id="language-spanish"
+				/>
+
+				<label for="language-turkish">Turkish</label>
+				<input
+					type="radio"
+					name="langauge"
+					value="Turkish"
+					id="language-turkish"
+				/>
+			</div>
+
+			<input type="submit" value="Send" />
+      <button type="submit">
+        <img class="button-img" src="https://images.unsplash.com/photo-1701154193012-945fe4010533?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="strawberries">
+        Send</button>
+
+      <input type="reset" value="Clear" />
+      <button type="reset">Clear</button>
+
+		</form>
+	</body>
+</html>
