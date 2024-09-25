@@ -1,0 +1,63 @@
+/* 
+  Colors
+  Standard colors (e.g. blue, red, yellow). Full list can be found here: https://www.w3schools.com/tags/ref_colornames.asp
+
+  HEX & HEXA (#RRGGBB & #RRGGBBAA) - #000 #000000 both are black color (mostly used in frontend development)
+
+  RGB - rgb(0,0,0)
+  RGBA - rgba(0,0,0,0.4) the last number is for opacity (transparency)
+  
+  HSL & HSLA (HUE - SATURATION - LIGHTNESS)
+
+  ! We do not mix different color types in the same project, only rgba is an exception and can be combined with other types when opacity is needed.
+ */
+ * {
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 80vw;
+}
+
+.width-600 {
+  width: 600px;
+  border: solid blue 1px;
+}
+
+.width-150 {
+  width: 150px;
+  background-color: aqua;
+  border: 1px solid black;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+  border: solid red 10px;
+  /* margin: 35px; */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.margin-y {
+  margin: 20px auto;
+}
+
+a {
+  padding: 10px;
+  margin: 20px;
+}
+
+/* 
+Margin / padding (shorthand properties)
+10px - top, right, bottom, left
+10px 20px - 10px top and bottom, 20px right and left
+10px 20px 30px - 10px top, 20px bottom, 30px right and left
+10px 20px 30px 40px - 10px top, 20px right, 30px bottom, 40px left
