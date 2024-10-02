@@ -4,10 +4,54 @@
 
   HEX & HEXA (#RRGGBB & #RRGGBBAA) - #000 #000000 both are black color (mostly used in frontend development)
 
-  RGB - rgb(0,0,0)
+  RGB - rgb(255,255,255)
   RGBA - rgba(0,0,0,0.4) the last number is for opacity (transparency)
   
   HSL & HSLA (HUE - SATURATION - LIGHTNESS)
 
   ! We do not mix different color types in the same project, only rgba is an exception and can be combined with other types when opacity is needed.
  */
+
+ :root {
+  /* "Standart" font size for the web page */
+  font-size: 18px;
+ }
+
+ body {
+  background-color: #b22525;
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+  line-height: 163.2%;
+ }
+
+ h1, h2, h3 {
+  font-family: "Mukta", sans-serif;
+  
+ }
+
+ h1 {
+  font-weight: 900;
+  /* Convert to rem */
+  font-size: 48px;
+ }
+
+ .transparent {
+  height: 50vh;
+  width: 50%;
+  margin: 50px auto;
+  /* background-color: #0000008a; */
+  background-color: rgba(0,0,0,0.3);
+  color: #6596ec;
+  font-size: 1rem;
+ }
+
+ /* CSS Units:
+1. Aboslute Units (px, pt, cm, mm, in)
+2. Relative Units (%, em, rem, vw, vh)
+em, rem - relative to the font-size of the element (usually used with font related sizes)
+EM - Standard browser font size is 16px, 1em = 16px, 1.5em = 24px, 2em = 32px
+REM - root / body / html element's font-size 14px, 1rem = 14px, 1.5rem = 21px, 2rem = 28px
+
+% - relative to the parent element
+vw, vh - relative to the viewport size (1vw = 1% of viewport width, 100vw = 100% of viewport width)
+  */
