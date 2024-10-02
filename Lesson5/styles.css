@@ -1,0 +1,13 @@
+/* 
+  Colors
+  Standard colors (e.g. blue, red, yellow). Full list can be found here: https://www.w3schools.com/tags/ref_colornames.asp
+
+  HEX & HEXA (#RRGGBB & #RRGGBBAA) - #000 #000000 both are black color (mostly used in frontend development)
+
+  RGB - rgb(0,0,0)
+  RGBA - rgba(0,0,0,0.4) the last number is for opacity (transparency)
+  
+  HSL & HSLA (HUE - SATURATION - LIGHTNESS)
+
+  ! We do not mix different color types in the same project, only rgba is an exception and can be combined with other types when opacity is needed.
+ */
