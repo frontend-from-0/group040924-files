@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+
+.bg-image {
+  min-height: 100vh;
+  background-image: url(./bg-hero.svg);
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+ul {
+  margin: 0;
+  padding: 10px 40px;
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+}
