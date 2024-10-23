@@ -1,0 +1,28 @@
+/* Example CSS file, not used in our current project (not linked to any HTML document) */
+:root {
+  --color-primary: #44416e;
+  --color-secondary: #333;
+
+  --spacing-xsmall: 4px;
+  --spacing-small: 12px;
+  --spacing-medium: 16px;
+
+  /* --variable-name: value */
+  /* Variable are usually used in CSS for:
+  - colors
+  - font sizes
+  - spacing (margin, padding, gap)
+  - border radius
+  - box shadow
+  ; */
+}
+
+
+.btn {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  /* color: #333; */
+  /* background-color: #f9f9f9; */
+
+  padding: var(--spacing-small) var(--spacing-xsmall);
+}
