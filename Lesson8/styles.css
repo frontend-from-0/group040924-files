@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #fbfbfd;
+}
+
+nav {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+
+main {
+  padding: 192px 64px;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.container-left > p {
+  font-size: 24px;
+  margin: 32px 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.landing {
+  font-size: 26px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  color: #2245e3;
+}
+
+.headerlist {
+  display: flex;
+  justify-content: flex-end;
+  /* Added align-items to center elements in the header vertically */
+  align-items: center;
+  list-style-type: none;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  color: #929ecc;
+}
+
+.ui-btn {
+  /* It's better to avoid setting with and height of elements like this one in absolute unites. You don't really need height here as padding and height of the text should give you enough height. For width, it would be safer to use min-width/max-width instead of width if you want to use absolute unit. */
+  width: 109px;
+  height: 26px; 
+  background-color: #111B47;
+  border-radius: 2px;
+  padding: 4px 10px 4px 15px;
+}
+
+.ui-kit {
+  color: #FFF;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  /* This 2 values don't actually have any effect as <a> element in inline by default. You don't need them here anyway, styles for li are enough.
+  width: 100%;
+  max-width: 109px; */
+}
+
+.section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.container-left {
+  width: 100%;
+  max-width: 556px;
+  gap: 40px 78px;
+  margin: 0 auto;
+}
+
+.container-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 40px;
+  margin: 0 auto;
+}
+
+.column1 {
+  width: 100%;
+  max-width: 318px;
+}
+
+.item {
+  /* I don't think you need to specify height or max-height here. In cases like this, we usually want to have element rely on the height of it's content. If you want spacing, you can use padding and margin to create space inside/around the element.
+  height: 100%;
+  max-height: 76px; */
+  width: 318px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 0 32px;
+  margin-bottom: 78px;
+}
+
+/* For icon classes, it would be better to create one class that holds settings like width, height, border-radius. Then, specify second class that holds background-color. This way you would have a solution that is more reliable and easier to maintain. */
+.icon1 {
+  width: 100%;
+  max-width: 76px;
+  height: 76px;
+  background-color: #3088ff;
+  border-radius: 16px;
+}
+
+.icon2 {
+  width: 100%;
+  max-width: 76px;
+  height: 76px;
+  background-color: #f2c94c;
+  border-radius: 16px;
+}
+
+.icon3 {
+  width: 100%;
+  max-width: 76px;
+  height: 76px;
+  background-color: #9b51e0;
+  border-radius: 16px;
+}
+
+.icon4 {
+  width: 100%;
+  max-width: 76px;
+  height: 76px;
+  background-color: #f8b3b8;
+  border-radius: 16px;
+}
+
+.icon5 {
+  width: 100%;
+  max-width: 76px;
+  height: 76px;
+  background-color: #6fcf97;
+  border-radius: 16px;
+}
+
+.icon6 {
+  width: 100%;
+  max-width: 76px;
+  height: 76px;
+  background-color: #62dbe2;
+  border-radius: 16px;
+}
+
+/* I think none of the styles here are needed. */
+/* .short-text {
+  display: inline-block;
+  You cannot use justify-content for an element that is not a flex/grid container.
+  justify-content: space-between;
+  width: 100%;
+  max-width: 210px;
+} */
+
+.short-text > p {
+  font-size: 16px;
+  margin: 0;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.btn-grey {
+  /* There's no reason for making this element a flex-container as it does not contain any elements. */
+  /* display: flex; */
+  /* Different padding values on all sides make the text misaligned, instead use the same padding value on top&bottom  and left&right.  */
+  /* padding: 20px 20px 24px 60px; */
+  padding: 24px 56px;
+  /* align-items: flex-start; */
+  /* I'd recommend using min-width here instead. */
+  width: 222px;
+  /* I'd recommend to set height of links/buttons like this, rely on the content's height and padding instead
+  height: 66px; */
+  /* Doesn't have any effect
+  gap: 10px; */
+  border-radius: 40px;
+  background: #333;
+  color: #fff;
+  font-family: Lato;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.section2 {
+  display: flex; 
+  justify-content: center;
+  margin: 118px auto;
+  /* This is another example where you can set height explicitly. I don't think it would change across different devices. So could be 'height: 283px;' instead.  */
+  height: 100%;
+  max-height: 283px;
+}
+
+/* Same here as for the icon elements in the first section. You can have onle class that defins main styles, then specifc classes that defines bg image. And also special selector for first and last elements to set border radius. */
+.sq1 {
+  /* Image like this is not an actual picture but a grafic image. It's better to use svg in this case (if available) as svg is more lightweight and does not loose quality. */
+  background: url("./frame39.jpg");
+  height: 283px;
+  width: 328px;
+  border-radius: 25px 0 0 25px;
+
+}
+
+.sq2 {
+  background: url("./frame40.jpg");
+  display: inline-block;
+  height: 283px;
+  width: 328px;
+}
+
+.sq3 {
+  background: url("./frame41.jpg");
+  display: inline-block;
+  height: 283px;
+  width: 328px;
+}
+
+.sq4 {
+  background: url("./frame46.jpg");
+  display: inline-block; 
+  height: 283px;  
+  width: 328px;
+  border-radius: 0 25px 25px 0;
+}
+
+.sub-text {
+  color: #FFF;
+  font-family: "Lato";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  /* Don't push the text to the bottom using margin. Instead, make the div element (e.g. sq1) a flex container and the use align-text:flex-end; to push <p> element to the bottom of the div. */
+  margin: 221px 45px 24px 65px;
+  width: 223px;
+}
