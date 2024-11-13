@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --max-width: 1184px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0 16px;
+  text-align: center;
+}
+
+h1 {
+  /* 3 * 16 rem (font size that is calculated depening on the root element's font size). Alternative to rem is em unit. */
+  font-size: 3rem; 
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  /* 48px is about the size of human's thumb */
+  min-width: 48px;
+}
+
+.btn-icon {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  height: 112px;
+}
+
+.navlist {
+  display: none;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero-img > img {
+  width: 100%;
+}
+
+/* 
+On mobile, font-size is 2rem, on tablet 2.5rem, on desktop 3rem.
+*/
+
+
+/* Mobiles */
+/* @media all and (max-width: 639.98px) {
+  h1 {
+    font-size: 2rem; 
+  }
+} */
+
+
+/* 
+  To create responsive design, we need to use media queries.
+  We base media queries on the breakpoint values.
+  
+  Tailwind CSS
+
+  'sm': '640px',
+  'md': '768px',
+  'lg': '1024px',
+  'xl': '1280px',
+
+
+  Material UI
+
+  xs, extra-small: 0px
+  sm, small: 600px
+  md, medium: 900px
+  lg, large: 1200px
+  xl, extra-large: 1536px
+*/
+
+

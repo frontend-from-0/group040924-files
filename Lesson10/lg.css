@@ -1,0 +1,22 @@
+/* Desktop */
+h1 {
+  font-size: 3rem; 
+}
+
+.nav {
+  flex-direction: row;
+}
+
+.navlist {
+  display: flex;
+}
+
+.nav-hamburger {
+  display: none;
+}
+
+
+.hero {
+  flex-direction: row;
+  align-items: center;
+}
