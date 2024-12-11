@@ -17,8 +17,8 @@ JavaScript code execution is a complex process that involves several stages.
 ## Execution Context
 When you run JavaScript code, the engine creates an Execution Context. This is the environment in which your code is executed. 
 There are two types of Execution Contexts:
-- Global Execution Context (GEC): Created for code that's not inside any function3.
-- Function Execution Context (FEC): Created each time a function is called3.
+- Global Execution Context (GEC): Created for code that's not inside any function.
+- Function Execution Context (FEC): Created each time a function is called.
 
 ## Execution Process
 The execution of JavaScript code happens in two main phases:
