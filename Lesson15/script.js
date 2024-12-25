@@ -1,3 +1,5 @@
+// Keys: function, return, if, else , switch
+
 /*
 1. Check Password Length
    - Define a function `checkPassword(password)` that checks if `password` length
@@ -7,12 +9,41 @@
    - Call the function with different passwords and log the result.
 */
 
+function checkPassword(password) {
+  const passwordLength = password.length;
+  if (passwordLength >= 8) {
+    console.log("Password length is sufficient.");
+    return "Password length is sufficient.";
+  } else {
+    console.log("Password is too short.");
+    return "Password is too short.";
+  }
+}
+
+// document.getElementById("submitButton").addEventListener("click", function (e) {
+//   e.preventDefault();
+//   const password = document.getElementById("passwordInput").value;
+//   const feedbackMessage = checkPassword(password);
+//   document.getElementById("passwordError").innerText = feedbackMessage;
+// });
+
+const passwordExample = "Password123";
+
+checkPassword("Password is too short.");
+checkPassword("Short.");
+checkPassword(passwordExample);
+
 /*
 2. Uppercase Name
    - Define a function `uppercaseName(name)` that converts a given name to uppercase.
-   - Log the uppercase result to the console.
+   - Log the uppercase result to the console. .toUpperCase()
    - Example: "John Doe" -> "JOHN DOE"
 */
+function upperCaseName(name) {
+  console.log(name.toUpperCase());
+}
+
+upperCaseName("Password is too short.");
 
 /*
 3. Lowercase Email
@@ -20,6 +51,11 @@
    - Log the normalized email to the console.
    - Example: "USER@Example.COM" -> "user@example.com"
 */
+
+function normalizeEmail(email) {
+  console.log(email.toLowerCase());
+}
+normalizeEmail("EMAIL@email.COM");
 
 /*
 4. Extract Domain
@@ -52,11 +88,23 @@
      - Logs "b is bigger" if b > a
      - Logs "Numbers are equal" if they are the same
 */
+function compareNumbers(a, b) {
+  if (a > b) {
+    console.log("a is bigger");
+  } else if (b > a) {
+    console.log("b is bigger");
+  } else {
+    console.log("Numbers are equal");
+  }
+}
 
+compareNumbers(4, 5);
+compareNumbers(8, 3);
+compareNumbers(4, 4);
 /*
 8. Palindrome Check
    - Define a function `isPalindrome(str)` that checks if `str` is the same
-     forwards and backwards.
+     forwards and backwards (normalize the string and compare it to reversed version of itself).
    - If it is, log: "<str> is a palindrome"
    - Otherwise, log: "<str> is not a palindrome"
 */
@@ -67,6 +115,22 @@
      cut the string to `maxLength` characters, then appends "..." if it was too long.
    - Log the final truncated string.
 */
+
+function truncateString(text, maxLength) {
+  if (text.length > maxLength) {
+    console.log(text.slice(0, maxLength) + "...");
+  } else {
+    console.log(text);
+  }
+}
+truncateString(
+  "Define a function `truncateString(text, maxLength)` that uses slice()",
+  10,
+);
+truncateString(
+  "Define a function `truncateString(text, maxLength)` that uses slice()",
+  5,
+);
 
 /*
 10. Check Even or Odd (if-else)
@@ -91,6 +155,43 @@
      7 -> "Sunday"
      - Log the matched day or "Invalid day" if out of range.
 */
+
+function getDayOfWeek(num) {
+  switch (num) {
+    case 1:
+      console.log("Monday");
+      break;
+    case 2:
+      console.log("Tuesday");
+      break;
+    case 3:
+      console.log("Weddnesday");
+      break;
+    case 4:
+      console.log("Thursday");
+      break;
+    case 5:
+      console.log("Friday");
+      break;
+    case 6:
+      console.log("Saturday");
+      break;
+    case 7:
+      console.log("Sunday");
+      break;
+    default:
+      console.log("Unknow day");
+      break;
+  }
+}
+
+getDayOfWeek(5);
+getDayOfWeek(4);
+getDayOfWeek(1);
+getDayOfWeek('hello');
+getDayOfWeek(10);
+
+
 
 /*
 13. Repeat a String

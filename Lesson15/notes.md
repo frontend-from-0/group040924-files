@@ -1,7 +1,9 @@
+Livesandbox link: https://codesandbox.io/p/live/b74bdff6-1b13-4442-bc1b-46346ecd1eb4
+
+
 In JavaScript, a *string* is a sequence of characters used to represent text. Strings are one of the primitive data types in JavaScript and are immutable, meaning once a string is created, it cannot be changed. However, you can create new strings based on operations performed on existing ones. JavaScript provides a variety of methods to manipulate strings, making it easier to work with text.
 
 See more information about different methods available in JS for String object: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
-
 
 
 ## Functions
@@ -17,8 +19,8 @@ function (parameter1, parameter2) {
 function multiplyTwoNumbers (parameter1, parameter2) {
   return parameter1 * parameter2;
 }
-multiplyTwoNumbers(10, 40);
-multiplyTwoNumbers(1, 40);
+multiplyTwoNumbers(10, 40); // 400
+multiplyTwoNumbers(1, 40); // 40
 
 ### Function Expression
 const sumOfTwoNumbers = function (parameter1, parameter2) {
@@ -61,10 +63,12 @@ if (condition) {
 
 }
 #### Same line if condition:
-if (today === 'Wednessday') console.log('Join the lesson');
+if (today === 'Wednesday') console.log('Join the lesson');
 
 #### if ... else Statement
 if (condition) {
+ ... some code
+} else if (another condtion) {
  ... some code
 } else if (another condtion) {
  ... some code
