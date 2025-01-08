@@ -33,6 +33,7 @@ The for...in loop is used to iterate over the properties of an object (the keys)
 */
 
 const person = { firstName: "John", lastName: "Doe", age: 25 };
+
 for (const key in person) {
     console.log(`${key}: ${person[key]}`);
 }
