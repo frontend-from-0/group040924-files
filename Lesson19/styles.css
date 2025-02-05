@@ -1,0 +1,20 @@
+.button {
+  display: block;
+}
+
+.button--hidden {
+  display: none;
+}
+
+.color-red {
+  color: #ff0000;
+}
+
+.text-bold {
+  font-weight: 900;
+}
+
+.my-3 {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
