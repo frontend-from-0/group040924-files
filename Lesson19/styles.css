@@ -6,12 +6,20 @@
   display: none;
 }
 
+
+
+.text-bold {
+  font-weight: 900;
+}
+.text-secondary {
+  color: #6c757d;
+}
 .color-red {
   color: #ff0000;
 }
 
-.text-bold {
-  font-weight: 900;
+.text {
+  font-size: 14px;
 }
 
 .my-3 {
