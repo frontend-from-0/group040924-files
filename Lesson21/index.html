@@ -1,45 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./styles.css">
-</head>
+  <body>
+    <h1>Form Validation Example</h1>
+    <div class="form-container">
+      <form id="myForm" novalidate>
+        <label for="name" class="form-label">Name:</label>
+        <p id="nameError" class="error"></p>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="John"
+          class="form-input"
+        />
 
-<body>
-  <h1>Form Validation Example</h1>
-  <div class="form-container">
+        <label for="surname" class="form-label">Surname:</label>
+        <p id="surnameError" class="error"></p>
+        <input
+          type="text"
+          id="surname"
+          name="surname"
+          class="form-input"
+        />
 
-    <form id="myForm">
-      <label for="name" class="form-label">Name:</label>
-      <p id="nameError" class="error"></p>
-      <input type="text" id="name" name="name" placeholder="John" class="form-input" required>
+        <label for="email" class="form-label">Email:</label>
+        <p id="emailError" class="error"></p>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          class="form-input"
+        />
 
-      <label for="surname" class="form-label">Surname:</label>
-      <p id="surnameError" class="error"></p>
-      <input type="text" id="surname" name="surname" class="form-input" required>
+        <label for="age" class="form-label">Age:</label>
+        <p id="ageError" class="error"></p>
+        <input type="number" id="age" name="age" class="form-input" />
 
-      <label for="email" class="form-label">Email:</label>
-      <p id="emailError" class="error"></p>
-      <input type="email" id="email" name="email" class="form-input" required>
+        <label for="phone" class="form-label">Phone Number:</label>
+        <p id="phoneError" class="error"></p>
+        <input type="tel" id="phone" name="phone" class="form-input" />
 
-      <label for="age" class="form-label">Age:</label>
-      <p id="ageError" class="error"></p>
-      <input type="number" id="age" name="age" class="form-input" required>
+        <input type="submit" id="submitButton" value="Submit" class="submit-button" />
+      </form>
+      <p id="formSubmitSuccess" class=""></p>
+    </div>
 
-      <label for="phone" class="form-label">Phone Number:</label>
-      <p id="phoneError" class="error"></p>
-      <input type="tel" id="phone" name="phone" class="form-input" required>
-
-      <input type="submit" value="Submit" class="submit-button">
-    </form>
-    <p id="formSubmitSuccess" class=""></p>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
