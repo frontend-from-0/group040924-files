@@ -23,11 +23,13 @@ Fetch API uses Promises under the hood, it's the main way how we will be using t
 
 /*
   How to create a Promise?
+const myExamplePromise = new Promise((resolve, reject) => { 
+  //code here 
+});
 
-  const myExamplePromise = new Promise((resolve, reject) => { 
-    //code here 
-  });
 */
+
+
 
 
 const myPromise = new Promise((resolve, reject) => {
@@ -47,23 +49,76 @@ const myPromise = new Promise((resolve, reject) => {
   }, 2000); // Delay for 2 seconds (2000 milliseconds)
 });
 
-// Step 2: Using .then() to handle resolved Promise
-myPromise
-  .then((result) => {
-    console.log(result); // This code will execute if the Promise is resolved
-  })
-  .catch((error) => {
-    console.error(error); // This code will execute if the Promise is rejected
-  });
+// console.log('1. Promise created. Waiting for it to resolve or reject...',myPromise );
 
-console.log("Promise created. Waiting for it to resolve or reject...");
+// // Step 2: Using .then() to handle resolved Promise
+// myPromise
+//   .then((result) => {
+//     console.log('Result of the promise', result); // This code will execute if the Promise is resolved
+//   })
+//   .catch((error) => {
+//     console.error('Promise returned an error', error); // This code will execute if the Promise is rejected
+//   });
+
+// console.log("Promise created. Waiting for it to resolve or reject...");
 
 
 /* Asyc / await syntax for working with Promises */
 
 // Examples of making a function asyncronous
-// Function declaration
+async function myFunction() {
+  try {
+    const result = await myPromise;
+    console.log('Inside myFunction. Result of the promise', result);
+  } catch (error) {
+    console.error('Inside myFunction. Promise returned an error', error);
+  }
+}
+
+
+// Anonymys function
+ (async function () {
+  try {
+    const result = await myPromise;
+    console.log('Inside myFunction. Result of the promise', result);
+  } catch (error) {
+    console.error('Inside myFunction. Promise returned an error', error);
+  }
+})();
+
 // Function expression
+const myAnotherFunction = async function myFunction() {
+  try {
+    const result = await myPromise;
+    console.log('Inside myFunction. Result of the promise', result);
+  } catch (error) {
+    console.error('Inside myFunction. Promise returned an error', error);
+  }
+}
+
 // Arrow function
 
+const myArrowFunction = async () => {
+  try {
+    const result = await myPromise;
+    console.log('Inside myFunction. Result of the promise', result);
+  } catch (error) {
+    console.error('Inside myFunction. Promise returned an error', error);
+  }
+}
+
 // Try, catch, finally
+
+
+const myArrowFunctionWithFinalCase = async () => {
+  try {
+    const result = await myPromise;
+    console.log('Inside myFunction. Result of the promise', result);
+  } catch (error) {
+    console.error('Inside myFunction. Promise returned an error', error);
+  } finally {
+    console.log('This code will always execute');
+  }
+}
+
+myArrowFunctionWithFinalCase();
