@@ -18,8 +18,9 @@ For accessing properties, calling methods, and accessing array elements.
 let result = object?.property;
 let result = object?.[property];
 let result = object?.method();
-let result = data.person.address?.street?.name;
+let result = data?.person?.address?.street?.name;
 ```
+
 
 ## Combining with Nullish Coalescing
 Optional chaining can be combined with the nullish coalescing operator (??) to provide default values:
