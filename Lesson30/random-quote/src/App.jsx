@@ -1,27 +1,38 @@
-import {quotes as intialQuotes} from './quotes';
-import './App.css';
-import {QuoteCard} from './components/QuoteCard';
-import {useState} from 'react';
+import "./App.css";
+import { useState } from "react";
+import { ProfilePage } from "./pages/ProfilePage";
+import { MainPage } from "./pages/MainPage";
+
+const pages = {
+  home: "Home",
+  profile: "Profile",
+};
 
 function App() {
-  const [quotes, setQuotes] = useState(intialQuotes);
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-
-  function handleNextQuoteClick () {
-    const randomIndex = Math.floor(Math.random() * quotes.length);
-    setCurrentIndex(randomIndex);
-
-  }
+  const [currentPage, setCurrentPage] = useState(pages.home);
 
   return (
     <div className="App">
-      <QuoteCard quote={quotes[currentIndex].quote} author={quotes[currentIndex].author} />
-
-      <button onClick={handleNextQuoteClick}>Next quote</button>
+      <nav>
+        <ul>
+          <li>
+            <button onClick={() => setCurrentPage(pages.home)}>
+              {pages.home}
+            </button>
+          </li>
+          <li>
+            <button onClick={() => setCurrentPage(pages.profile)}>
+              {pages.profile}
+            </button>
+          </li>
+        </ul>
+      </nav>
+      {currentPage === pages.home && (
+        <MainPage />
+      )}
+      {currentPage === pages.profile && <ProfilePage />}
     </div>
   );
 }
 
 export default App;
-
