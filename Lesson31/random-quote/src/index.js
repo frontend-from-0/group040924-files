@@ -5,7 +5,6 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import {QuotesContextProvider} from './QuotesContextProvider';
 import {QuoteIndexContextProvider} from './QuoteIndexContextProvider';
-import {Examples} from './Examples';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -13,8 +12,7 @@ root.render(
   <React.StrictMode>
     <QuotesContextProvider>
       <QuoteIndexContextProvider>
-        {/* <App /> */}
-        <Examples />
+        <App />
       </QuoteIndexContextProvider>
     </QuotesContextProvider>
   </React.StrictMode>,

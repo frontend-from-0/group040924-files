@@ -9,11 +9,11 @@ export const QuotesContextProvider = ({children}) => {
   const [quotes, setQuotes] = useState(intialQuotes);
   
   return (
-    <QuotesContext value={quotes}>
-      <QuotesDispatchContext value={setQuotes}>
+    <QuotesContext.Provider value={quotes}>
+      <QuotesDispatchContext.Provider value={setQuotes}>
         {children}
-      </QuotesDispatchContext>
-    </QuotesContext>
+      </QuotesDispatchContext.Provider>
+    </QuotesContext.Provider>
   )
 };
 

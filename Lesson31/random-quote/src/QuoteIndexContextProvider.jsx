@@ -7,11 +7,11 @@ export const QuoteIndexContextProvider = ({children}) => {
   const [quoteIndex, setQuoteIndex] = useState(0);
   
   return (
-    <QuoteIndexContext value={quoteIndex}>
-      <QuoteIndexDispatchContext value={setQuoteIndex}>
+    <QuoteIndexContext.Provider value={quoteIndex}>
+      <QuoteIndexDispatchContext.Provider value={setQuoteIndex}>
         {children}
-      </QuoteIndexDispatchContext>
-    </QuoteIndexContext>
+      </QuoteIndexDispatchContext.Provider>
+    </QuoteIndexContext.Provider>
   )
 };
 

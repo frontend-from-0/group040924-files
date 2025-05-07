@@ -27,7 +27,7 @@ export const StyledComponentsExample = () => {
 		<StyledDiv color={theme.palette.primary.main}>
 			{/* <Typography variant='h3' color={theme.palette.primary.main}>This is Styled Components Example component</Typography> */}
       <h1>This is Styled Components Example component</h1>
-			<StyledTypography variant='body1'>
+			<StyledTypography variant='body1' component="p">
 				If you're into the JavaScript-in-CSS vibe, this is for you. Styled
 				components let you write actual CSS in your JavaScript file, using
 				tagged template literals. It's like merging styles and components into
