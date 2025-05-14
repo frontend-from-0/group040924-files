@@ -37,7 +37,7 @@ logMessage('Test message');
 
 const processUserInput: (
 	input: string,
-	callback: (response: string) => void
+	callback: (message: string) => void
 ) => void = function (input, callback) {
 	// Process the input...
 	const response = `Processed input: ${input}`;

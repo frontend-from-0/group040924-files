@@ -60,10 +60,11 @@ type Breed = {
 type DogType = AnimalType & Breed;
 
 const animal: AnimalType = { name: "Duck" };
+const myDog: Dog = {name: 'Dog', breed: 'Som breed'}
 
 const puddle: Breed = { breed: "Puddle" };
 
-const dog : DogType = { name: "Dog", breed: "Poodle" };
+const dog : DogType = { name: "Dog", breed: puddle.breed };
 
 // Union Types
 // Types can represent union types directly, while interfaces cannot.
