@@ -20,6 +20,7 @@ export const MainPage = () => {
       <QuoteCard
         quote={quotes[currentIndex].quote}
         author={quotes[currentIndex].author}
+        likedBy={quotes[currentIndex].likedBy}
       />
 
       <Button label="Next quote" handleOnClick={handleNextQuoteClick} />
