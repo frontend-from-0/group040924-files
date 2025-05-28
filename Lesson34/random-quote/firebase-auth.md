@@ -28,11 +28,13 @@ Create `src/firebase.js`:
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
+// ⚠️ Replace the values below with your actual Firebase project config.
+// You can use environment variables or paste the values directly.
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  appId: "YOUR_APP_ID",
+  apiKey: process.env.REACT_APP_API_KEY || "YOUR_API_KEY",
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN || "YOUR_AUTH_DOMAIN",
+  projectId: process.env.REACT_APP_PROJECT_ID || "YOUR_PROJECT_ID",
+  appId: process.env.REACT_APP_APP_ID || "YOUR_APP_ID",
   // Include other keys if needed (e.g., storageBucket)
 };
 

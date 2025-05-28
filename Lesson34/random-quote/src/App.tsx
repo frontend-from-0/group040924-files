@@ -2,12 +2,14 @@ import { useState } from 'react';
 import { ProfilePage } from './pages/ProfilePage';
 import { MainPage } from './pages/MainPage';
 import {PostsPage} from './pages/PostsPage'
+import {CreateUserPage} from './pages/CreateUserPage';
 
 enum Page {
   home = 'Home',
   posts = 'Posts',
   profile = 'Profile',
   settings = 'Settings',
+  createUserPage = 'Create Account'
 }
 
 const allPages = Object.values(Page);
@@ -34,6 +36,7 @@ function App() {
       {currentPage === Page.posts && <PostsPage />}
       {currentPage === Page.home && <MainPage />}
       {currentPage === Page.profile && <ProfilePage />}
+      {currentPage === Page.createUserPage && <CreateUserPage />}
       {currentPage === Page.settings && <p>Settings</p>}
     </div>
   );
