@@ -1,7 +1,14 @@
-import { createContext, useReducer, useContext, Dispatch } from 'react';
-import { quotes as intialQuotes } from './quotes';
+import {
+  createContext,
+  useReducer,
+  useContext,
+  Dispatch,
+  useEffect,
+} from 'react';
 import { ReactNode } from 'react';
 import { Quote } from './types';
+import { collection, getDocs } from 'firebase/firestore';
+import { collections, db } from './firebase';
 
 export const QuotesContext = createContext<Quote[] | undefined>(undefined);
 
@@ -17,7 +24,18 @@ export const QuotesContextProvider = ({
   children,
 }: QuotesContextProviderProps) => {
   // const [quotes, setQuotes] = useState(intialQuotes);
-  const [quotes, dispatch] = useReducer(quotesReducer, intialQuotes);
+  const [quotes, dispatch] = useReducer(quotesReducer, []);
+
+  useEffect(() => {
+    getDocs(collection(db, collections.quotes))
+      .then((querySnapshot) => {
+        const quotesFromDB = querySnapshot.forEach((doc) => doc.data());
+        // Set quotes state to quotesFromDB
+      })
+      .catch((error) =>
+        console.error('An error occured when fetching all quotes', error),
+      );
+  }, []);
 
   return (
     <QuotesContext.Provider value={quotes}>
@@ -34,7 +52,7 @@ export enum QuotesActionType {
   DISLIKE_QUOTE = 'DISLIKE_QUOTE',
   ADD_NEW_QUOTE = 'ADD_NEW_QUOTE',
   UPDATE_QUOTE = 'UPDATE_QUOTE',
-  DELETE_QUOTE = 'DELETE_QUOTE'
+  DELETE_QUOTE = 'DELETE_QUOTE',
 }
 
 type SetQuotesAction = {

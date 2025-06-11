@@ -1,15 +1,17 @@
 import { useState } from 'react';
 import { ProfilePage } from './pages/ProfilePage';
 import { MainPage } from './pages/MainPage';
-import {PostsPage} from './pages/PostsPage'
-import {CreateUserPage} from './pages/CreateUserPage';
+import { PostsPage } from './pages/PostsPage';
+import { CreateUserPage } from './pages/CreateUserPage';
+import { quotes, addQuotesToDB } from './quotes';
+import { Quote } from './types';
 
 enum Page {
   home = 'Home',
   posts = 'Posts',
   profile = 'Profile',
   settings = 'Settings',
-  createUserPage = 'Create Account'
+  createUserPage = 'Create Account',
 }
 
 const allPages = Object.values(Page);
@@ -31,6 +33,14 @@ function App() {
               </button>
             </li>
           ))}
+          <li>
+            <button
+              className={'py-2.5 px-3'}
+              onClick={() => addQuotesToDB(quotes)}
+            >
+              Add all quotes
+            </button>
+          </li>
         </ul>
       </nav>
       {currentPage === Page.posts && <PostsPage />}
