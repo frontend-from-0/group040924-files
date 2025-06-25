@@ -29,7 +29,7 @@ export enum Category {
   groceries = 'groceris'
 }
 
-export const allCategories  = Object.keys(Category);
+export const allCategories = Object.keys(Category);
 
 export enum AvailabilityStatus {
   IN_STOCK = 'In Stock',

@@ -1,10 +1,11 @@
 import { NewProductFormState } from '@/app/admin/products/new/page';
+import { Category } from '@/types/product';
 import { z } from 'zod';
 
 const productSchema = z.object({
   title: z.string().min(3).max(100),
   description: z.string().min(50).max(500),
-  category: z.string(),
+  category: z.nativeEnum(Category),
 });
 
 export async function addNewProductAction(
