@@ -1,8 +1,9 @@
 'use client';
-import { allCategories, Product } from '../../../../types/product';
+import { allCategories, Product } from '@/types/product';
 import {useActionState} from 'react';
-import { addNewProductAction} from '../../../actions/admin/products';
 import Form from 'next/form';
+import { addNewProductAction } from '@/app/actions/admin/products';
+import { SuccessPage } from './Success';
 
 const initialState: NewProductFormState = {
   success: false,
@@ -16,15 +17,15 @@ export interface NewProductFormState {
   inputs?: Partial<Product>;
   errors?: {
     [K in keyof Product]?: string[];
-  }
+  },
+  data?: Partial<Product>;
 }
 
 export default function Admin() {
   const [state, formAction, isPending] = useActionState<NewProductFormState, FormData>(addNewProductAction, initialState);
 
   if (isPending) return <p>Loading...</p>;
-
-  console.log(state);
+  if (state.success) return <SuccessPage product={state.data}/>;
 
   return (
     <main className='max-w-xl mx-auto'>
@@ -42,14 +43,14 @@ export default function Admin() {
           {state?.errors?.title ? <p>{state?.errors?.title}</p> : <></>}
         </div>
         <div className='flex flex-col'>
-          <label htmlFor='description'>Description</label>
-          <input type='text' id='description' name='description' className='dark:bg-stone-200 dark:text-stone-900'/>
+          <label htmlFor='descr'>Description</label>
+          <input type='text' id='descr' name='description' className='dark:bg-stone-200 dark:text-stone-900'/>
         </div>
 
         <div className='flex flex-col'>
           <label htmlFor='category'>Category</label>
-          <select id='category' className='dark:bg-stone-200 dark:text-stone-900'>
-            <option value=''>select category</option>
+          <select id='category' name='category' className='dark:bg-stone-200 dark:text-stone-900'>
+            <option defaultValue='' disabled>select category</option>
             {allCategories.map((category) => (
               <option key={category} value={category}>
                 {category}

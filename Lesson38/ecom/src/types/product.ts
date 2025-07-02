@@ -1,5 +1,5 @@
 export interface Product {
-  id: number;
+  id: number | string; // TODO: update to string type
   title: string;
   description: string;
   category: string; // TODO: update with an enum value
@@ -62,6 +62,6 @@ export interface Review {
 export interface Meta {
   createdAt: string;
   updatedAt: string;
-  barcode: string;
-  qrCode: string;
+  barcode?: string;
+  qrCode?: string;
 }
