@@ -1,6 +1,7 @@
 import { getAuthenticatedAppForUser } from '@/app/lib/firebase/serverApp.js';
 import { getProducts } from '@/app/lib/firebase/firestore';
 import { getFirestore } from 'firebase/firestore';
+import { FormComponent } from './Form';
 
 // Force next.js to treat this route as server-side rendered
 // Without this line, during the build process, next.js will treat this route as static and build a static HTML file for it
@@ -35,6 +36,9 @@ export default async function Home() {
           <p className="text-gray-600 mb-2">{p.description}</p>
         </div>
       ))}
+
+      <FormComponent />
+      
     </main>
   );
 }
