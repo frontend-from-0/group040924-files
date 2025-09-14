@@ -8,3 +8,4 @@
 - Clean Code: By Robert C. Martin
 - The Pragmatic Programmer: by David Thomas and Andrew Hunt
 - Software Engineering at Google
+- Head First Design Patterns: Building Extensible and Maintainable Object-Oriented Software 2nd Edition
