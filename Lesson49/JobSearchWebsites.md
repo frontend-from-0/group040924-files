@@ -22,6 +22,7 @@ https://dream.jobs/
 https://www.careerflow.ai/still-hiring
 https://gritsearch.com/
 https://www.kickresume.com/pyjama-jobs/
+TODO: Anna to find the right link for kickresume
 https://remotemore.com/companies/
 
 
