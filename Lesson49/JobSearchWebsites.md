@@ -5,6 +5,8 @@ https://up2staff.com/
 https://www.works-hub.com/jobs/search
 https://www.jobteaser.com/
 
+
+https://justjoin.it/
 https://wellfound.com/ - you need to be careful with this one as not every start up there can pay you a proper salary
 
 https://www.glassdoor.com/index.html
